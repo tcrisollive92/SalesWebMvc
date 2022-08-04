@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SalesWebMvc.Models;
+using SalesWebMvc.Models.ViewModels;
 using System.Diagnostics;
 
 namespace SalesWebMvc.Controllers
@@ -17,7 +17,19 @@ namespace SalesWebMvc.Controllers
         {
             return View();
         }
+        public IActionResult About()
+        {
+            ViewData["Message"] = "Salles Web MVC App from C# Course";
+            ViewData["Student"] = "Thaís Oliveira";
+            
+            return View();
+        }
+        public IActionResult Contact()
+        {
+            ViewData["Message"] = "Your contact page.";
 
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
